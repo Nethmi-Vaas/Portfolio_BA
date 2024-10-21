@@ -26,7 +26,7 @@ html {
 }
 
 body {
-   background: var(--bg-color);
+   background: var(--second-bg-color);
    color: var(--text-color);
 }
 
@@ -80,14 +80,19 @@ section {
 
 .home {
    display: flex;
-   justify-content: center;
+   justify-content: left;
    align-items: center;
 }
 
+.home-img {
+   margin-left: auto; /* This pushes the image container to the right */
+}
+
 .home-img img {
-   width: 50vw;
+   width: 40vw;
    animation: floatImage 4s ease-in-out infinite;
 }
+
 
 @keyframes floatImage {
    0% {
@@ -168,11 +173,17 @@ span {
    justify-content: center;
    align-items: center;
    gap: 2rem;
-   background: var(--second-bg-color);
+   background: var(--bg-color);
 }
 
 .about-img img {
    width: 35rem;
+}
+.justified-text {
+   text-align: justify;
+   font-size: 1rem; /* Adjust font size as needed */
+   line-height: 1.6; /* Adjust for better readability */
+   margin: 20px 0; /* Add some margin for spacing */
 }
 
 .heading {
@@ -237,7 +248,8 @@ span {
 }
 
 .portfolio {
-   background: var(--second-bg-color);
+   background: var(   --second-bg-color
+   );
 }
 
 .portfolio h2 {
@@ -313,45 +325,50 @@ span {
    color: var(--second-bg-color);
 }
 
+.contact {
+   background: var(--bg-color); /* Background color for the section */
+   padding: 50px 20px; /* Padding for spacing */
+   text-align: center; /* Center align section header */
+}
+
 .contact h2 {
    margin-bottom: 3rem;
 }
 
-.contact form {
-   max-width: 70rem;
-   margin: 1rem auto;
-   text-align: center;
-   margin-bottom: 3rem;
+.contact-container {
+   display: flex; /* Use flexbox for layout */
+   flex-direction: column; /* Stack boxes vertically */
+   align-items: center; /* Center boxes */
+   gap: 20px; /* Space between boxes */
 }
 
-.contact form .input-box {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
+.contact-box {
+   background-color: var(--second-bg-color); /* Use the same background color as the form inputs */
+   color: var(--text-color); /* Use the same text color */
+   padding: 2rem; /* Padding inside the box */
+   border-radius: 1rem; /* Rounded corners */
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+   width: 100%; /* Make each box take the full width */
+   max-width: 600px; /* Maximum width for each box */
+   text-align: center; /* Center align text in the box */
 }
 
-.contact form .input-box input,
-.contact form textarea {
-   width: 100%;
-   padding: 1.5rem;
-   font-size: 1.6rem;
-   color: var(--text-color);
-   background: var(--second-bg-color);
-   border-radius: .8rem;
-   margin: .7rem 0;
+.contact-box p {
+   margin: 0; /* Remove margin */
+   font-size: 1.6rem; /* Font size for the text (adjusted for better visibility) */
 }
 
-.contact form .input-box input {
-   width: 49%;
+.contact-box a {
+   color: #ffffff; /* Change link color to white */
+   text-decoration: none; /* Remove underline from links */
+   font-weight: bold; /* Make links bold */
+   font-size: 1.6rem; /* Ensure link font size matches the paragraph */
+   transition: color 0.3s; /* Smooth transition for color change */
 }
 
-.contact form textarea {
-   resize: none;
-}
-
-.contact form .btn {
-   margin-top: 2rem;
-   cursor: pointer;
+.contact-box a:hover {
+   color:  #0ef; /* Change link color to light blue on hover */
+   text-decoration: underline; /* Underline links on hover */
 }
 
 .footer {
